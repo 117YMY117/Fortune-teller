@@ -1,0 +1,164 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    overflow: hidden;
+}
+
+.container {
+    background: rgba(255, 255, 255, 0.9);
+    backdrop-filter: blur(10px);
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    width: 95%;
+    max-width: 600px;
+    animation: fadeIn 0.8s ease-out;
+    max-height: 90vh;
+    overflow-y: auto;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+h1 {
+    color: #5a67d8;
+    margin-bottom: 25px;
+    font-size: 2.2em;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+}
+
+label {
+    display: block;
+    margin-top: 15px;
+    text-align: left;
+    font-weight: 600;
+    color: #4a5568;
+}
+
+input {
+    width: 100%;
+    padding: 14px;
+    margin-top: 8px;
+    box-sizing: border-box;
+    border: 2px solid #e2e8f0;
+    border-radius: 8px;
+    font-size: 16px;
+    transition: border-color 0.3s ease;
+}
+
+input:focus {
+    outline: none;
+    border-color: #5a67d8;
+    box-shadow: 0 0 0 3px rgba(90, 103, 216, 0.1);
+}
+
+button {
+    margin-top: 25px;
+    padding: 14px 30px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 17px;
+    font-weight: 600;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 100%;
+}
+
+button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+button:active {
+    transform: translateY(0);
+}
+
+#result {
+    margin-top: 30px;
+    padding: 20px;
+    border-radius: 10px;
+    background: linear-gradient(135deg, #f0f4ff 0%, #e6fffa 100%);
+    color: #2d3748;
+    font-size: 16px;
+    line-height: 1.6;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    animation: slideUp 0.6s ease-out;
+    display: none;
+    text-align: left;
+    max-height: 60vh;
+    overflow-y: auto;
+}
+
+@keyframes slideUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+#result.show {
+    display: block;
+}
+
+.fortune-title {
+    color: #5a67d8;
+    font-size: 1.5em;
+    margin-bottom: 15px;
+    font-weight: 700;
+}
+
+.fortune-content {
+    font-size: 1.1em;
+    margin-bottom: 15px;
+}
+
+.fortune-details {
+    background: rgba(255, 255, 255, 0.85);
+    border-radius: 15px;
+    padding: 20px;
+    margin-bottom: 20px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 8px 32px rgba(31, 38, 135, 0.15);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    text-align: left;
+    transition: all 0.3s ease;
+}
+
+.fortune-details:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 40px rgba(31, 38, 135, 0.25);
+}
+
+.zodiac-sign {
+    font-size: 2em;
+    margin: 10px 0;
+}
+
+.lunar-fortune {
+    margin-top: 15px;
+}
+
+.lunar-fortune h3 {
+    color: #5a67d8;
+    margin-bottom: 10px;
+    font-size: 1.3em;
+    text-align: center;
+}
+
+.lunar-fortune p {
+    margin: 8px 0;
+    line-height: 1.5;
+}
+
+.lunar-fortune strong {
+    color: #4a5568;
+}
